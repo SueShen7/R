@@ -1,0 +1,53 @@
+# Table of contents
+
+* [Intro Page](README.md)
+* [Visualization](visualization.md)
+
+## Spring 2020
+
+* [Bayesian](spring-2020/spring-2020-bayesian/README.md)
+  * [1. Monte Carlo](spring-2020/spring-2020-bayesian/1.-monte-carlo.md)
+  * [2. Prior predictive distribution & Posterior distribution](spring-2020/spring-2020-bayesian/2.-prior-predictive-distribution-and-posterior-distribution.md)
+  * [3. brm package](spring-2020/spring-2020-bayesian/3.-brm-package.md)
+* [Missing Data](spring-2020/untitled-1/README.md)
+  * [6. MICE Package](spring-2020/untitled-1/6.-mice-package.md)
+  * [5. MI Package](spring-2020/untitled-1/5.-mi-package.md)
+  * [4. More complicated imputation](spring-2020/untitled-1/4.-more-complicated-imputation/README.md)
+    * [MCAR, MAR, NMAR simulation](spring-2020/untitled-1/4.-more-complicated-imputation/mcar-mar-nmar-simulation.md)
+  * [3. Imputation](spring-2020/untitled-1/3.-imputation.md)
+  * [2. Throw away and imputation](spring-2020/untitled-1/lecture-2.md)
+  * [1. Mechanisms](spring-2020/untitled-1/lecture-1.md)
+* [Multivariate](spring-2020/multivariate/README.md)
+  * [4. Factor analysis, PCA](spring-2020/multivariate/4.-factor-analysis-pca.md)
+  * [3. Eigenvalue decomposition, SVD](spring-2020/multivariate/untitled.md)
+  * [2. Distances](spring-2020/multivariate/2.-distances.md)
+* [Frequentist](spring-2020/frequentist/README.md)
+  * [Topic 3. Regression](spring-2020/frequentist/topic-3.-regression.md)
+  * [Topic 2. Hypothesis Testing](spring-2020/frequentist/topic-2.-hypothesis-testing.md)
+* [GLM](spring-2020/spring-2020-glm/README.md)
+  * [1. Introduction](spring-2020/spring-2020-glm/1.-introduction.md)
+  * [2. Binomial - Logit & Probit](spring-2020/spring-2020-glm/2.-binomial-logistic-regression.md)
+  * [3. Multinomial & Ordinal](spring-2020/spring-2020-glm/3.-multinomial-and-ordinal.md)
+  * [4. Poisson](spring-2020/spring-2020-glm/4.-poisson.md)
+* [Expr Design](spring-2020/spring-2020-expr-design/README.md)
+  * [1. \*\*ANOVA](spring-2020/spring-2020-expr-design/1.-anova-contrast.md)
+  * [2. Contrast](spring-2020/spring-2020-expr-design/2.-contrast.md)
+  * [3. Factorial Design](spring-2020/spring-2020-expr-design/3.-factorial-design.md)
+  * [4. Power Analysis](spring-2020/spring-2020-expr-design/4.-power-analysis.md)
+  * [5. \*\*Block Design](spring-2020/spring-2020-expr-design/5.-block-design.md)
+  * [6. Split-Plot Designs](spring-2020/spring-2020-expr-design/6.-split-plot-designs.md)
+
+## FALL 2019
+
+* [Messy Data and Machine Learning](fall-2019/messy-data-and-machine-learning/README.md)
+  * [Basic Functions](fall-2019/messy-data-and-machine-learning/package-dplyr.md)
+  * [Machine Learning Models](fall-2019/messy-data-and-machine-learning/machine-learning-models.md)
+  * [Model Evaluation](fall-2019/messy-data-and-machine-learning/model-evaluation.md)
+  * [Web Scraping](fall-2019/messy-data-and-machine-learning/untitled.md)
+* [Untitled](fall-2019/untitled.md)
+
+## Datacamp
+
+* [Machine Learning for Marketing Analytics](datacamp/machine-learning-for-marketing-analytics/README.md)
+  * [Modeling Customer Lifetime Value with Linear Regression](datacamp/machine-learning-for-marketing-analytics/clv-ke-hu-sheng-ming-zhou-qi-jia-zhi.md)
+

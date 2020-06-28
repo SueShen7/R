@@ -1,0 +1,4 @@
+# GLM
+
+Generalized linear model
+

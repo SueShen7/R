@@ -40,7 +40,7 @@ Generative \(can simulate data\) ‒ Good at binary and multiclass classificatio
 
 ‒ Generative \(can simulate data\) ‒ Good at binary and multiclass classification ‒ **Very strong assumption: Gaussian class-specific data distribution, and constant \(co\)variance.** ‒ Unclear how widely this is used these days.
 
-[http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/\#linear-discriminant-analysis---lda](http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/#linear-discriminant-analysis---lda)
+"[http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/\#linear-discriminant-analysis---lda](http://www.sthda.com/english/articles/36-classification-methods-essentials/146-discriminant-analysis-essentials-in-r/#linear-discriminant-analysis---lda)"
 
 ```text
 library(MASS)

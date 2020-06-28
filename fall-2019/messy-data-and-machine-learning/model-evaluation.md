@@ -96,11 +96,11 @@ model <- train(Fertility ~., data = swiss, method = "lm",
 print(model)
 ```
 
-{% embed url="http://www.sthda.com/english/articles/38-regression-model-validation/157-cross-validation-essentials-in-r/" %}
+"[http://www.sthda.com/english/articles/38-regression-model-validation/157-cross-validation-essentials-in-r/](http://www.sthda.com/english/articles/38-regression-model-validation/157-cross-validation-essentials-in-r/)"
 
 ## Bootstrap
 
 The bootstrap works as follows: generate many new datasets by **sampling from your original dataset with replacement**. Estimate your quantity of interest on each “bootstrapped” dataset, then see how these estimates vary.
 
-[https://github.com/SueShen7/coursesnyu/blob/master/Lab 7 - the bootstrap.R](https://github.com/SueShen7/coursesnyu/blob/master/Lab%207%20-%20the%20bootstrap.R)
+"[https://github.com/SueShen7/coursesnyu/blob/master/Lab 7 - the bootstrap.R](https://github.com/SueShen7/coursesnyu/blob/master/Lab%207%20-%20the%20bootstrap.R)"
 

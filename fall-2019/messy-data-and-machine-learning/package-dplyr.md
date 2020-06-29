@@ -58,5 +58,11 @@ ggsave("question_a3_2.png", path = 'hw4_Liang_Shen/figures',
 write_csv(coefficients,path='hw3_Gao_Feng_Shen/data/question_a2_coefficients.csv')
 ```
 
+`dir.create` 
+
+```text
+dir.create("hw5_gao_shen/data")
+```
+
 
 

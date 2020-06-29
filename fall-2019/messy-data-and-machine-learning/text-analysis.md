@@ -25,11 +25,13 @@ plot_words <- plot_words %>%
   mutate(num_words_plot=n())
 ```
 
-sentiment analysis
+单词包：sentiment analysis: positive or negative; left join or inner join
 
 ```text
 library(tidytext)
 bing <- get_sentiments("bing")
+plot_words_bing <- plot_words_all %>% inner_join(bing)
+plot_words_sentiment <- plot_words_all %>% left_join(bing)
 ```
 
 

@@ -45,6 +45,7 @@
   * [Model Evaluation](fall-2019/messy-data-and-machine-learning/model-evaluation.md)
   * [Web Scraping](fall-2019/messy-data-and-machine-learning/untitled.md)
   * [Text Analysis](fall-2019/messy-data-and-machine-learning/text-analysis.md)
+  * [Subset Selection and Regularization](fall-2019/messy-data-and-machine-learning/subset-selection-and-regularization.md)
 * [Untitled](fall-2019/untitled.md)
 
 ## Datacamp

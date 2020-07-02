@@ -22,7 +22,7 @@ Backward: starting with full model and remove a feature each time
 
 ### Standard
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28129%29.png)
 
 Don’t select a subset of features based on p-values! Unimportant features may appear important, and vice-versa.
 
@@ -44,6 +44,10 @@ Ridge regression shrinks the coefficients and it helps to reduce the model compl
 
  Lasso regression not only helps in reducing over-fitting but it can help us in feature selection.
 
+![](../../.gitbook/assets/image%20%28128%29.png)
+
+### Code
+
 ```text
 library(glmnet)
 # prepare data
@@ -56,4 +60,8 @@ lasso <- glmnet(x, y, family = "binomial", alpha = 1, lambda = 0.01)
 ```
 
 Codes should refer to "[https://github.com/SueShen7/coursesnyu/blob/master/analysis.R](https://github.com/SueShen7/coursesnyu/blob/master/analysis.R)". It's a little complicated since a specific package is used and there is requirement for data structure.
+
+Example
+
+![](../../.gitbook/assets/image%20%28130%29.png)
 

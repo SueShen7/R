@@ -39,6 +39,8 @@
 
 ## FALL 2019
 
+* [Multi-Level Model](fall-2019/multi-level-model/README.md)
+  * [Nested grouping structure](fall-2019/multi-level-model/nested-grouping-structure.md)
 * [Messy Data and Machine Learning](fall-2019/messy-data-and-machine-learning/README.md)
   * [Basic Functions](fall-2019/messy-data-and-machine-learning/package-dplyr.md)
   * [Machine Learning Models](fall-2019/messy-data-and-machine-learning/machine-learning-models.md)

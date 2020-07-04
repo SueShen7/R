@@ -85,3 +85,24 @@ se = F)
 
 Then pay attention to polynomial trends, autocorrelation, heteroscedasticity in residual plots.
 
+## Information criteria
+
+```text
+anova(fit.Mconst, fit.Mlin, fit.Mcubic, fit.MearlyLin, fit.MearlyQuad, refit = F)
+# Data: dat
+# Models:
+# fit.Mconst: mathgain ~ 1 + (1 | schoolid)
+# fit.Mlin: mathgain ~ yearstea + (1 | schoolid)
+# fit.MearlyLin: mathgain ~ yt_early + yt_late + (1 | schoolid)
+# fit.Mcubic: mathgain ~ yearstea + I(yearstea^2) + I(yearstea^3) + (1 | schoolid)
+# fit.MearlyQuad: mathgain ~ yt_early + I(yt_early^2) + yt_late + (1 | schoolid)
+#                npar   AIC   BIC  logLik deviance  Chisq Df Pr(>Chisq)    
+# fit.Mconst        3 11785 11800 -5889.6    11779                         
+# fit.Mlin          4 11787 11807 -5889.3    11779 0.6833  1     0.4084    
+# fit.MearlyLin     5 11787 11813 -5888.7    11777 1.2260  1     0.2682    
+# fit.Mcubic        6 11789 11820 -5888.7    11777 0.0218  1     0.8826    
+# fit.MearlyQuad    6 11782 11812 -5885.0    11770 7.3142  0     <2e-16 ***
+# ---
+# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
+

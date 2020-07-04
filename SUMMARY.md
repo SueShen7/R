@@ -43,7 +43,7 @@
   * [Nested grouping structure](fall-2019/multi-level-model/nested-grouping-structure.md)
   * [Conceptualization and model selection](fall-2019/multi-level-model/chapter-2.md)
   * [Random slopes and wald test](fall-2019/multi-level-model/3.md)
-  * [BLUPs](fall-2019/multi-level-model/blups.md)
+  * [BLUPs and residuals](fall-2019/multi-level-model/blups.md)
 * [Messy Data and Machine Learning](fall-2019/messy-data-and-machine-learning/README.md)
   * [Basic Functions](fall-2019/messy-data-and-machine-learning/package-dplyr.md)
   * [Machine Learning Models](fall-2019/messy-data-and-machine-learning/machine-learning-models.md)

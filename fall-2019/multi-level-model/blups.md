@@ -1,4 +1,4 @@
-# BLUPs
+# BLUPs and residuals
 
 ## Predicting random effects: BLUPs
 

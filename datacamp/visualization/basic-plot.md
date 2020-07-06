@@ -1,4 +1,4 @@
-# Visualization
+# Basic \`plot\`
 
 `plot` in R
 
@@ -11,13 +11,13 @@ legend("topleft", c("boy","girl"),
      col=c("black","red"), pch = 1)
 ```
 
-![](.gitbook/assets/image%20%28104%29.png)
+![](../../.gitbook/assets/image%20%28104%29.png)
 
 * `legend` : position, col, pch \(point type\), lty \(line type\)
 
-![](.gitbook/assets/image%20%28109%29.png)
+![](../../.gitbook/assets/image%20%28109%29.png)
 
-![](.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 
 

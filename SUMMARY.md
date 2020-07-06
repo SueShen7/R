@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Intro Page](README.md)
-* [Visualization](visualization.md)
 
 ## Spring 2020
 
@@ -57,5 +56,7 @@
 
 * [Machine Learning for Marketing Analytics](datacamp/machine-learning-for-marketing-analytics/README.md)
   * [Modeling Customer Lifetime Value with Linear Regression](datacamp/machine-learning-for-marketing-analytics/clv-ke-hu-sheng-ming-zhou-qi-jia-zhi.md)
-  * [Logistic Regression](datacamp/machine-learning-for-marketing-analytics/logistic-regression.md)
+* [Visualization](datacamp/visualization/README.md)
+  * [Basic \`plot\`](datacamp/visualization/basic-plot.md)
+  * [ggplot2](datacamp/visualization/ggplot2.md)
 

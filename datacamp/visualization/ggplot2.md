@@ -28,7 +28,7 @@ dia_plot + geom_point(aes(color = clarity), alpha=0.4)
 
 ### Data structure
 
-Wide, tidy, and normal
+**Wide and tidy**
 
 ![](../../.gitbook/assets/image%20%28150%29.png)
 

@@ -28,11 +28,46 @@ dia_plot + geom_point(aes(color = clarity), alpha=0.4)
 
 ### Data structure
 
-Tidy data to produce the following graph
+Wide, tidy, and normal
 
-Tidy data means we have all variables all groups data in a single dataset
+![](../../.gitbook/assets/image%20%28150%29.png)
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+ The `gather()` function moves information from the columns to the rows. It takes multiple columns and _gathers_ them into a single column by adding rows. Remember to "remove" all categorical variables with "-“ \(making them unchanged\).
+
+The `separate()` function splits one column into two or more columns according to a pattern you define. c\(\) includes the two variable names in the new dataset, " " includes the symbol that could seperate the corresponding variable.
+
+The `spread()` function spread a key-value pair across multiple columns. It converts a multi level categorical variable to several columns.
+
+To produce tidy data:
+
+```text
+iris.tidy <- iris %>%
+  gather(key, Value, -Species) %>%
+  separate(key, c("Part", "Measure"), "\\.")
+```
+
+To produce wide data \(one more step with tidy data\):
+
+```text
+iris.wide <- iris %>%
+  gather(key, value, -Species) %>%
+  separate(key, c("Part", "Measure"), "\\.") %>%
+  spread(Measure, value)
+```
+
+Produced with tidy data:
+
+![](../../.gitbook/assets/image%20%28145%29.png)
+
+Produced with wide data: **\(more reasonable\)**
+
+```text
+ggplot(iris.wide, aes(x=Length, y=Width, color = Part))+
+  geom_jitter()+
+  facet_grid(.~Species)
+```
+
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 ## Aesthetics
 
@@ -73,7 +108,7 @@ ggplot(mtcars, aes(x = cyl, y = mpg)) +
   geom_point()
 ```
 
-![](../../.gitbook/assets/image%20%28144%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
 `aes(color = )` 
 
@@ -84,7 +119,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_point(alpha=0.4)
 ```
 
-![](../../.gitbook/assets/image%20%28142%29.png)
+![](../../.gitbook/assets/image%20%28144%29.png)
 
 ### geom\_smooth - add a smoothed line
 
@@ -115,7 +150,7 @@ dia_plot <- dia_plot + geom_point(alpha=0.2)
 dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
 ```
 
-![](../../.gitbook/assets/image%20%28146%29.png)
+![](../../.gitbook/assets/image%20%28149%29.png)
 
 `method = "lm"`
 
@@ -125,7 +160,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(method = "lm", se=FALSE, lty = 2)
 ```
 
-![](../../.gitbook/assets/image%20%28147%29.png)
+![](../../.gitbook/assets/image%20%28151%29.png)
 
 `aes(group = 1)`
 
@@ -137,4 +172,30 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
 ```
 
 ![](../../.gitbook/assets/image%20%28136%29.png)
+
+### geom\_jitter
+
+ The jitter geom is a convenient shortcut for [`geom_point(position = "jitter")`](https://ggplot2.tidyverse.org/reference/geom_point.html). It adds a small amount of random variation to the location of each point, and is a useful way of handling overplotting caused by discreteness in smaller datasets. \(**when x is categorical variable**\)
+
+```text
+ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
+  geom_jitter() +
+  facet_grid(. ~ Measure)
+```
+
+![](../../.gitbook/assets/image%20%28143%29.png)
+
+
+
+## Facet
+
+### facet\_grid
+
+```text
+ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
+  geom_jitter() +
+  facet_grid(. ~ Measure)
+```
+
+![](../../.gitbook/assets/image%20%28142%29.png)
 

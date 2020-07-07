@@ -8,7 +8,7 @@ description: explore and explain
 
 ### 7 layers
 
-![](../../.gitbook/assets/image%20%28139%29.png)
+![](../../.gitbook/assets/image%20%28140%29.png)
 
 ### Grammar
 
@@ -30,7 +30,7 @@ dia_plot + geom_point(aes(color = clarity), alpha=0.4)
 
 **Wide and tidy**
 
-![](../../.gitbook/assets/image%20%28150%29.png)
+![](../../.gitbook/assets/image%20%28153%29.png)
 
  The `gather()` function moves information from the columns to the rows. It takes multiple columns and _gathers_ them into a single column by adding rows. Remember to "remove" all categorical variables with "-“ \(making them unchanged\).
 
@@ -57,7 +57,7 @@ iris.wide <- iris %>%
 
 Produced with tidy data:
 
-![](../../.gitbook/assets/image%20%28145%29.png)
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 Produced with wide data: **\(more reasonable\)**
 
@@ -67,13 +67,23 @@ ggplot(iris.wide, aes(x=Length, y=Width, color = Part))+
   facet_grid(.~Species)
 ```
 
-![](../../.gitbook/assets/image%20%28147%29.png)
+![](../../.gitbook/assets/image%20%28149%29.png)
 
 ## Aesthetics
 
 refers to `aes()`
 
+```text
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(shape = 21, size = 4, alpha = 0.6) 
+## specific parameters should be written in geom layer
+```
+
+![](../../.gitbook/assets/image%20%28151%29.png)
+
 ### color
+
+color is the outside layer of a shape
 
 both **continous and categorical** variable are fine. if color depends on a continous variable, it will give a continous color
 
@@ -82,7 +92,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
   geom_point()
 ```
 
-![](../../.gitbook/assets/image%20%28138%29.png)
+![](../../.gitbook/assets/image%20%28139%29.png)
 
 ### size
 
@@ -93,11 +103,45 @@ ggplot(mtcars, aes(x = wt, y = mpg, size = disp)) +
   geom_point()
 ```
 
-![](../../.gitbook/assets/image%20%28140%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 ### shape
 
 shape requires a **categorical** variable
+
+### fill
+
+fill color
+
+### alpha
+
+transparency 0 is transparent
+
+### linetype
+
+line dash pattern
+
+### label
+
+text on plots or axes
+
+```text
+ggplot(mtcars, aes(wt, mpg, label = cyl))+
+  geom_text()
+```
+
+![](../../.gitbook/assets/image%20%28136%29.png)
+
+`rownames(data)`
+
+```text
+ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
+  geom_text(color = "red")
+```
+
+![](../../.gitbook/assets/image%20%28141%29.png)
+
+
 
 ## Geometries
 
@@ -108,7 +152,7 @@ ggplot(mtcars, aes(x = cyl, y = mpg)) +
   geom_point()
 ```
 
-![](../../.gitbook/assets/image%20%28146%29.png)
+![](../../.gitbook/assets/image%20%28148%29.png)
 
 `aes(color = )` 
 
@@ -119,7 +163,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_point(alpha=0.4)
 ```
 
-![](../../.gitbook/assets/image%20%28144%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
 ### geom\_smooth - add a smoothed line
 
@@ -138,7 +182,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_smooth()
 ```
 
-![](../../.gitbook/assets/image%20%28137%29.png)
+![](../../.gitbook/assets/image%20%28138%29.png)
 
 `se=`
 
@@ -150,7 +194,7 @@ dia_plot <- dia_plot + geom_point(alpha=0.2)
 dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
 ```
 
-![](../../.gitbook/assets/image%20%28149%29.png)
+![](../../.gitbook/assets/image%20%28152%29.png)
 
 `method = "lm"`
 
@@ -160,7 +204,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(method = "lm", se=FALSE, lty = 2)
 ```
 
-![](../../.gitbook/assets/image%20%28151%29.png)
+![](../../.gitbook/assets/image%20%28154%29.png)
 
 `aes(group = 1)`
 
@@ -171,7 +215,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(aes(group=1))
 ```
 
-![](../../.gitbook/assets/image%20%28136%29.png)
+![](../../.gitbook/assets/image%20%28137%29.png)
 
 ### geom\_jitter
 
@@ -183,9 +227,11 @@ ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
   facet_grid(. ~ Measure)
 ```
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28145%29.png)
 
+### geom\_text
 
+refer to label in aesthetics
 
 ## Facet
 
@@ -197,5 +243,5 @@ ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
   facet_grid(. ~ Measure)
 ```
 
-![](../../.gitbook/assets/image%20%28142%29.png)
+![](../../.gitbook/assets/image%20%28144%29.png)
 

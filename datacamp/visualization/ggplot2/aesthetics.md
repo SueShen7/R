@@ -76,7 +76,15 @@ ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
 
 modify position of points, or bars
 
-e.g. `position = "jitter"`
+e.g. `position = "jitter"/"dodge"/"fill"/"stack"`
+
+or if we want to specify width
+
+```text
+posn.j <- position_jitter(0.1)
+ggplot(data, aes())+
+    geom_point(position = posn.j)
+```
 
 ### scale\_
 

@@ -125,6 +125,6 @@ plt_country_vs_lifeExp +
     x = x_start, y = y_start,
     xend = x_end, yend = y_end,
     arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
-    color = "grey40"
+    color = "grey40")
 ```
 

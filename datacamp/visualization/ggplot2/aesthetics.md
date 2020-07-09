@@ -129,5 +129,27 @@ ggplot(mtcars, aes(x = mpg, y = 0)) + ## here we only have x, we dont have y
 
 ### labs
 
+names of x and y axis, title, source etc
+
+```text
+labs(title = "Highest and lowest life expectancies, 2007", 
+     caption = "Source: gapminder")
+```
+
+### group
+
+group the data but provide no color difference
+
+```text
+ggplot(ChickWeight, aes(x = Time, y = weight)) +
+  geom_line(aes(group = Chick))
+```
+
+![](../../../.gitbook/assets/image%20%28176%29.png)
+
+
+
+
+
 
 

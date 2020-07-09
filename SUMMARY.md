@@ -59,7 +59,10 @@
 * [Visualization](datacamp/visualization/README.md)
   * [Basic \`plot\`](datacamp/visualization/basic-plot.md)
   * [ggplot2](datacamp/visualization/ggplot2/README.md)
+    * [Introduction](datacamp/visualization/ggplot2/introduction.md)
     * [Aesthetics](datacamp/visualization/ggplot2/aesthetics.md)
     * [Geometries](datacamp/visualization/ggplot2/geometries.md)
     * [Problems](datacamp/visualization/ggplot2/problems.md)
+    * [Theme](datacamp/visualization/ggplot2/theme.md)
+    * [A Project](datacamp/visualization/ggplot2/a-project.md)
 

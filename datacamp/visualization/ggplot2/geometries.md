@@ -29,11 +29,11 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     # iris.summary is the summarized data, means of data
 ```
 
-![](../../../.gitbook/assets/image%20%28182%29.png)
+![](../../../.gitbook/assets/image%20%28191%29.png)
 
 `shape`
 
-![](../../../.gitbook/assets/image%20%28179%29.png)
+![](../../../.gitbook/assets/image%20%28188%29.png)
 
 in the following example, geom\_ layer inherits color from ggplot layer, but we can modify the fill given the shape
 
@@ -43,7 +43,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     geom_point(data = iris.summary, shape = 21, size = 5, fill = "#00000080")
 ```
 
-![](../../../.gitbook/assets/image%20%28180%29.png)
+![](../../../.gitbook/assets/image%20%28189%29.png)
 
 ### geom\_vline
 
@@ -58,7 +58,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     geom_hline(data = iris.summary, aes(yintercept = Sepal.Width))
 ```
 
-![](../../../.gitbook/assets/image%20%28178%29.png)
+![](../../../.gitbook/assets/image%20%28187%29.png)
 
 ### geom\_jitter
 
@@ -92,69 +92,29 @@ qplot(
 )
 ```
 
-![](../../../.gitbook/assets/image%20%28165%29.png)
+![](../../../.gitbook/assets/image%20%28167%29.png)
 
-## geom\_smooth - add a smoothed line
-
-```text
-ggplot(diamonds, aes(x = carat, y = price))+
-  geom_point() + #if you dont want those points, you can ignore this line
-  geom_smooth()
-```
-
-![](../../../.gitbook/assets/image%20%28135%29.png)
-
-`aes(color = )`
-
-```text
-ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
-  geom_smooth()
-```
-
-![](../../../.gitbook/assets/image%20%28139%29.png)
-
-`se=`
-
-remove the error shading if `se=FALSE`
-
-```text
-dia_plot <- ggplot(diamonds, aes(x = carat, y = price))
-dia_plot <- dia_plot + geom_point(alpha=0.2)
-dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
-```
-
-![](../../../.gitbook/assets/image%20%28154%29.png)
-
-`method = "lm"`
-
-```text
-ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
-  geom_point() + 
-  geom_smooth(method = "lm", se=FALSE, lty = 2)
-```
-
-![](../../../.gitbook/assets/image%20%28159%29.png)
-
-`aes(group = 1)`
-
-```text
-ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
-  geom_point()  + 
-  geom_smooth(method = "lm", se=FALSE, lty = 2) +
-  geom_smooth(aes(group=1))
-```
-
-![](../../../.gitbook/assets/image%20%28137%29.png)
-
-```
-
-```
-
-![](../../../.gitbook/assets/image%20%28146%29.png)
-
-## geom\_text
+### geom\_text
 
 refer to label in aesthetics
+
+text on plots or axes
+
+```text
+ggplot(mtcars, aes(wt, mpg, label = cyl))+
+  geom_text()
+```
+
+![](../../../.gitbook/assets/image%20%28136%29.png)
+
+`rownames(data)`
+
+```text
+ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
+  geom_text(color = "red")
+```
+
+![](../../../.gitbook/assets/image%20%28142%29.png)
 
 ## Bar plots
 
@@ -197,21 +157,21 @@ ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "stack")
 ```
 
-![](../../../.gitbook/assets/image%20%28169%29.png)
+![](../../../.gitbook/assets/image%20%28174%29.png)
 
 ```text
 ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "dodge")
 ```
 
-![](../../../.gitbook/assets/image%20%28170%29.png)
+![](../../../.gitbook/assets/image%20%28175%29.png)
 
 ```text
 ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "fill")
 ```
 
-![](../../../.gitbook/assets/image%20%28174%29.png)
+![](../../../.gitbook/assets/image%20%28183%29.png)
 
 ### geom\_bar
 
@@ -273,9 +233,23 @@ ggplot(iris_summ, aes(x = Species, y = avg)) +
     width = 0.2)
 ```
 
-![](../../../.gitbook/assets/image%20%28173%29.png)
+![](../../../.gitbook/assets/image%20%28181%29.png)
 
-## Line plots - Time series
+### geom\_segment
+
+need to specify xend, yend, size
+
+```text
+ggplot(gm2007, aes(x = lifeExp, y = country, color = lifeExp)) +
+  geom_point(size = 4) +
+  geom_segment(aes(xend = 30, yend = country), size = 2)
+```
+
+![](../../../.gitbook/assets/image%20%28182%29.png)
+
+## Line plots
+
+### geom\_line
 
 `linetype`, `color`, `size`, among which `color` is the best, there are some fancy plots for `fill`
 
@@ -296,5 +270,67 @@ ggplot(economics, aes(x = date, y = unemploy/pop)) +
  # "begin" is the time of begining and "end" is the time of ending of recess
 ```
 
-![](../../../.gitbook/assets/image%20%28162%29.png)
+![](../../../.gitbook/assets/image%20%28163%29.png)
+
+### geom\_smooth
+
+```text
+ggplot(diamonds, aes(x = carat, y = price))+
+  geom_point() + #if you dont want those points, you can ignore this line
+  geom_smooth()
+```
+
+![](../../../.gitbook/assets/image%20%28135%29.png)
+
+`aes(color = )`
+
+```text
+ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
+  geom_smooth()
+```
+
+![](../../../.gitbook/assets/image%20%28139%29.png)
+
+`se=`
+
+remove the error shading if `se=FALSE`
+
+```text
+dia_plot <- ggplot(diamonds, aes(x = carat, y = price))
+dia_plot <- dia_plot + geom_point(alpha=0.2)
+dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
+```
+
+![](../../../.gitbook/assets/image%20%28154%29.png)
+
+`method = "lm"`
+
+```text
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se=FALSE, lty = 2)
+```
+
+![](../../../.gitbook/assets/image%20%28159%29.png)
+
+`aes(group = 1)`
+
+```text
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point()  + 
+  geom_smooth(method = "lm", se=FALSE, lty = 2) +
+  geom_smooth(aes(group=1))
+```
+
+![](../../../.gitbook/assets/image%20%28137%29.png)
+
+another example
+
+```text
+ggplot(ChickWeight, aes(x = Time, y = weight, col = Diet)) +
+  geom_line(aes(group = Chick), alpha=0.3) +
+  geom_smooth(lwd=2, se=FALSE)
+```
+
+![](../../../.gitbook/assets/image%20%28171%29.png)
 

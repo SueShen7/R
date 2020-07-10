@@ -56,9 +56,7 @@
 
 * [Machine Learning for Marketing Analytics](datacamp/machine-learning-for-marketing-analytics/README.md)
   * [Modeling Customer Lifetime Value with Linear Regression](datacamp/machine-learning-for-marketing-analytics/clv-ke-hu-sheng-ming-zhou-qi-jia-zhi.md)
-* [Visualization](datacamp/visualization/README.md)
-  * [Basic \`plot\`](datacamp/visualization/basic-plot.md)
-* [ggplot2](datacamp/ggplot2/README.md)
+* [GGPLOT2](datacamp/ggplot2/README.md)
   * [Introduction](datacamp/ggplot2/introduction.md)
   * [Aesthetics](datacamp/ggplot2/aesthetics.md)
   * [Geometries](datacamp/ggplot2/geometries.md)

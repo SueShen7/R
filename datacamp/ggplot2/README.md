@@ -2,5 +2,5 @@
 description: explore and explain
 ---
 
-# ggplot2
+# GGPLOT2
 

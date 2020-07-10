@@ -65,15 +65,5 @@ ggplot(iris.wide, aes(x=Length, y=Width, color = Part))+
 
 ![](../../../.gitbook/assets/image%20%28151%29.png)
 
-## Facet
 
-### facet\_grid
-
-```text
-ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
-  geom_jitter() +
-  facet_grid(. ~ Measure)
-```
-
-![](../../../.gitbook/assets/image%20%28145%29.png)
 

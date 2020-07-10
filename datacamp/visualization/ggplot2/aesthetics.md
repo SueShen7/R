@@ -25,6 +25,8 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
 
 ![](../../../.gitbook/assets/image%20%28140%29.png)
 
+more options in color could refer to scale\_ in [Coordinate](coordinate.md#scale_color_brewer).
+
 ### size
 
 the size must be a **continous** scale

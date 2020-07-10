@@ -65,5 +65,6 @@
     * [Problems](datacamp/visualization/ggplot2/problems.md)
     * [Theme](datacamp/visualization/ggplot2/theme.md)
     * [Coordinate](datacamp/visualization/ggplot2/coordinate.md)
+    * [Facet](datacamp/visualization/ggplot2/facet.md)
     * [A Project](datacamp/visualization/ggplot2/a-project.md)
 

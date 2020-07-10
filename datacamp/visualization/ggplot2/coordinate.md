@@ -49,6 +49,32 @@ can omit limits argument and use default setting
 
 ![](../../../.gitbook/assets/image%20%28195%29.png)
 
+### scale\_color\_brewer
+
+```text
+p + scale_color_brewer(palette = ...)
+```
+
+`palette` could be "Paired", "Set1", "Set2"...
+
+### scale\_color\_manual
+
+```text
+p + scale_color_manual(values = )
+```
+
+example
+
+```text
+blues <- brewer.pal(9, "Blues")
+blue_range <- colorRampPalette(blues) # set a function
+ggplot(Vocab, aes(x = education, fill = vocabulary)) +
+  geom_bar(position = "fill") +
+  scale_fill_manual(values = blue_range(11))
+```
+
+![](../../../.gitbook/assets/image%20%28190%29.png)
+
 ### sec.axis
 
 example: add second y axis for temperature \(2 kinds of units\)

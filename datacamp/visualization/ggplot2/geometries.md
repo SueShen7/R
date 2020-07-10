@@ -116,6 +116,18 @@ ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
 
 ![](../../../.gitbook/assets/image%20%28142%29.png)
 
+### geom\_count
+
+![](../../../.gitbook/assets/image%20%28206%29.png)
+
+`scale_size`
+
+![](../../../.gitbook/assets/image%20%28196%29.png)
+
+### geom\_quantile
+
+![](../../../.gitbook/assets/image%20%28202%29.png)
+
 ## Bar plots
 
 geom\_histogram\(\), geom\_bar\(\)
@@ -291,7 +303,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
 
 ![](../../../.gitbook/assets/image%20%28139%29.png)
 
-`se=`
+`se=` \(color can be changed with `fill` in geom layer\)
 
 remove the error shading if `se=FALSE`
 
@@ -313,7 +325,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
 
 ![](../../../.gitbook/assets/image%20%28159%29.png)
 
-`aes(group = 1)`
+`aes(group = 1): take all the data as a whole`
 
 ```text
 ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
@@ -324,6 +336,14 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
 
 ![](../../../.gitbook/assets/image%20%28137%29.png)
 
+`fullrange = TRUE`
+
+![](../../../.gitbook/assets/image%20%28207%29.png)
+
+`span`: the span of data used to smooth
+
+![](../../../.gitbook/assets/image%20%28194%29.png)
+
 another example
 
 ```text
@@ -333,4 +353,28 @@ ggplot(ChickWeight, aes(x = Time, y = weight, col = Diet)) +
 ```
 
 ![](../../../.gitbook/assets/image%20%28171%29.png)
+
+## Statistics
+
+### stat\_summary
+
+\[ common usage \]
+
+```text
+smean.cl.normal(x, mult=qt((1+conf.int)/2,n-1), conf.int=.95, na.rm=TRUE)
+
+smean.sd(x, na.rm=TRUE)
+
+smean.sdl(x, mult=2, na.rm=TRUE)
+
+smean.cl.boot(x, conf.int=.95, B=1000, na.rm=TRUE, reps=FALSE)
+
+smedian.hilow(x, conf.int=.95, na.rm=TRUE)
+```
+
+draw mean and its n standard deviations, remember to adjust position to dodge
+
+![](../../../.gitbook/assets/image%20%28200%29.png)
+
+![](../../../.gitbook/assets/image%20%28205%29.png)
 

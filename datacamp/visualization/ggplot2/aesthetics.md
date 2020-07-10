@@ -80,61 +80,21 @@ e.g. `position = "jitter"/"dodge"/"fill"/"stack"`
 
 or if we want to specify width
 
+e.g. `posn <- position_jitter(0.1) /  position_dodge(0.1) /` 
+
+`position_jitterdodge(jitter.width = 0.2, dodge.width = 0.1)`
+
 ```text
 posn.j <- position_jitter(0.1)
 ggplot(data, aes())+
     geom_point(position = posn.j)
 ```
 
-### scale\_
+`jitter_dodge` in `geom_point()`:
 
-modify x axis y axis legends
+![](../../../.gitbook/assets/image%20%28204%29.png)
 
-_specific functions:_
-
-* `scale_x_discrete` 
-* `scale_y_continuous`
-* `scale_fill_manual`
-* ...
-
-_commands in functions:_
-
-* `limits`
-* `breaks`
-* `expand`
-* `labels`
-* ...
-
-```text
-val = c("#E41A1C", "#377EB8")
-lab = c("Manual", "Automatic")
-cyl.am +
-  geom_bar(position = "dodge") +
-  scale_x_discrete("Cylinders") + 
-  scale_y_continuous("Number") +
-  scale_fill_manual("Transmission", values = val, labels = lab) 
-  ## here the first argument is the name of the legend, values and labels modifies
-  ## colors and names of labels
-```
-
-![](../../../.gitbook/assets/image%20%28138%29.png)
-
-```text
-ggplot(mtcars, aes(x = mpg, y = 0)) + ## here we only have x, we dont have y
-  geom_jitter()+ ## but with the help of jitter, we can visualize the x
-  scale_y_continuous(limits = c(-2,2))
-```
-
-![](../../../.gitbook/assets/image%20%28156%29.png)
-
-### labs
-
-names of x and y axis, title, source etc
-
-```text
-labs(title = "Highest and lowest life expectancies, 2007", 
-     caption = "Source: gapminder")
-```
+### 
 
 ### group
 

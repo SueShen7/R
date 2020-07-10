@@ -21,6 +21,8 @@ ggplot(Vocab, aes(x=education, y=vocabulary))+
 
 Or we can **jitter** the plot for categorical variables
 
+Or we can use geom\_count to visualize it with size
+
 ## Overlapped histogram
 
 ```text

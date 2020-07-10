@@ -1,12 +1,10 @@
 # Introduction
 
-## Introduction
+## 7 layers
 
-### 7 layers
+![](../../.gitbook/assets/image%20%28141%29.png)
 
-![](../../../.gitbook/assets/image%20%28141%29.png)
-
-### Grammar
+## Grammar
 
 We can write as
 
@@ -22,11 +20,11 @@ dia_plot <- ggplot(diamonds, aes(x = carat, y = price))
 dia_plot + geom_point(aes(color = clarity), alpha=0.4)
 ```
 
-### Data structure
+## Data structure
 
 **Wide and tidy**
 
-![](../../../.gitbook/assets/image%20%28157%29.png)
+![](../../.gitbook/assets/image%20%28157%29.png)
 
  The `gather()` function moves information from the columns to the rows. It takes multiple columns and _gathers_ them into a single column by adding rows. Remember to "remove" all categorical variables with "-“ \(making them unchanged\).
 
@@ -53,7 +51,7 @@ iris.wide <- iris %>%
 
 Produced with tidy data:
 
-![](../../../.gitbook/assets/image%20%28148%29.png)
+![](../../.gitbook/assets/image%20%28148%29.png)
 
 Produced with wide data: **\(more reasonable\)**
 
@@ -63,7 +61,7 @@ ggplot(iris.wide, aes(x=Length, y=Width, color = Part))+
   facet_grid(.~Species)
 ```
 
-![](../../../.gitbook/assets/image%20%28151%29.png)
+![](../../.gitbook/assets/image%20%28151%29.png)
 
 
 

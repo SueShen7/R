@@ -29,11 +29,11 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     # iris.summary is the summarized data, means of data
 ```
 
-![](../../../.gitbook/assets/image%20%28191%29.png)
+![](../../.gitbook/assets/image%20%28191%29.png)
 
 `shape`
 
-![](../../../.gitbook/assets/image%20%28188%29.png)
+![](../../.gitbook/assets/image%20%28188%29.png)
 
 in the following example, geom\_ layer inherits color from ggplot layer, but we can modify the fill given the shape
 
@@ -43,7 +43,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     geom_point(data = iris.summary, shape = 21, size = 5, fill = "#00000080")
 ```
 
-![](../../../.gitbook/assets/image%20%28189%29.png)
+![](../../.gitbook/assets/image%20%28189%29.png)
 
 ### geom\_vline
 
@@ -58,7 +58,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
     geom_hline(data = iris.summary, aes(yintercept = Sepal.Width))
 ```
 
-![](../../../.gitbook/assets/image%20%28187%29.png)
+![](../../.gitbook/assets/image%20%28187%29.png)
 
 ### geom\_jitter
 
@@ -72,7 +72,7 @@ ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
   facet_grid(. ~ Measure)
 ```
 
-![](../../../.gitbook/assets/image%20%28146%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
 ### geom\_dotplot
 
@@ -92,7 +92,7 @@ qplot(
 )
 ```
 
-![](../../../.gitbook/assets/image%20%28167%29.png)
+![](../../.gitbook/assets/image%20%28167%29.png)
 
 ### geom\_text
 
@@ -105,7 +105,7 @@ ggplot(mtcars, aes(wt, mpg, label = cyl))+
   geom_text()
 ```
 
-![](../../../.gitbook/assets/image%20%28136%29.png)
+![](../../.gitbook/assets/image%20%28136%29.png)
 
 `rownames(data)`
 
@@ -114,19 +114,19 @@ ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
   geom_text(color = "red")
 ```
 
-![](../../../.gitbook/assets/image%20%28142%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 ### geom\_count
 
-![](../../../.gitbook/assets/image%20%28206%29.png)
+![](../../.gitbook/assets/image%20%28206%29.png)
 
 `scale_size`
 
-![](../../../.gitbook/assets/image%20%28196%29.png)
+![](../../.gitbook/assets/image%20%28196%29.png)
 
 ### geom\_quantile
 
-![](../../../.gitbook/assets/image%20%28202%29.png)
+![](../../.gitbook/assets/image%20%28202%29.png)
 
 ## Bar plots
 
@@ -169,21 +169,21 @@ ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "stack")
 ```
 
-![](../../../.gitbook/assets/image%20%28174%29.png)
+![](../../.gitbook/assets/image%20%28174%29.png)
 
 ```text
 ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "dodge")
 ```
 
-![](../../../.gitbook/assets/image%20%28175%29.png)
+![](../../.gitbook/assets/image%20%28175%29.png)
 
 ```text
 ggplot(iris, aes(x = Sepal.Width ), fill = Species) +
     geom_histogram(binwidth = 0.1, position = "fill")
 ```
 
-![](../../../.gitbook/assets/image%20%28183%29.png)
+![](../../.gitbook/assets/image%20%28183%29.png)
 
 ### geom\_bar
 
@@ -207,7 +207,7 @@ cyl.am <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(am)))
 cyl.am + geom_bar(position = "stack")
 ```
 
-![](../../../.gitbook/assets/image%20%28149%29.png)
+![](../../.gitbook/assets/image%20%28149%29.png)
 
 `position = "fill"` , to show proportions
 
@@ -215,7 +215,7 @@ cyl.am + geom_bar(position = "stack")
 cyl.am + geom_bar(position = "fill") 
 ```
 
-![](../../../.gitbook/assets/image%20%28155%29.png)
+![](../../.gitbook/assets/image%20%28155%29.png)
 
 `position = "dodge"`
 
@@ -223,7 +223,7 @@ cyl.am + geom_bar(position = "fill")
 cyl.am + geom_bar(position = "dodge") 
 ```
 
-![](../../../.gitbook/assets/image%20%28158%29.png)
+![](../../.gitbook/assets/image%20%28158%29.png)
 
 `position = position_dodge(width = 0.2) /..`
 
@@ -232,7 +232,7 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
   geom_bar(position = position_dodge(width = 0.2), alpha = 0.6)
 ```
 
-![](../../../.gitbook/assets/image%20%28160%29.png)
+![](../../.gitbook/assets/image%20%28160%29.png)
 
 
 
@@ -245,7 +245,7 @@ ggplot(iris_summ, aes(x = Species, y = avg)) +
     width = 0.2)
 ```
 
-![](../../../.gitbook/assets/image%20%28181%29.png)
+![](../../.gitbook/assets/image%20%28181%29.png)
 
 ### geom\_segment
 
@@ -257,7 +257,7 @@ ggplot(gm2007, aes(x = lifeExp, y = country, color = lifeExp)) +
   geom_segment(aes(xend = 30, yend = country), size = 2)
 ```
 
-![](../../../.gitbook/assets/image%20%28182%29.png)
+![](../../.gitbook/assets/image%20%28182%29.png)
 
 ## Line plots
 
@@ -282,7 +282,7 @@ ggplot(economics, aes(x = date, y = unemploy/pop)) +
  # "begin" is the time of begining and "end" is the time of ending of recess
 ```
 
-![](../../../.gitbook/assets/image%20%28163%29.png)
+![](../../.gitbook/assets/image%20%28163%29.png)
 
 ### geom\_smooth
 
@@ -292,7 +292,7 @@ ggplot(diamonds, aes(x = carat, y = price))+
   geom_smooth()
 ```
 
-![](../../../.gitbook/assets/image%20%28135%29.png)
+![](../../.gitbook/assets/image%20%28135%29.png)
 
 `aes(color = )`
 
@@ -301,7 +301,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_smooth()
 ```
 
-![](../../../.gitbook/assets/image%20%28139%29.png)
+![](../../.gitbook/assets/image%20%28139%29.png)
 
 `se=` \(color can be changed with `fill` in geom layer\)
 
@@ -313,7 +313,7 @@ dia_plot <- dia_plot + geom_point(alpha=0.2)
 dia_plot + geom_smooth(aes(col = clarity), se = FALSE)
 ```
 
-![](../../../.gitbook/assets/image%20%28154%29.png)
+![](../../.gitbook/assets/image%20%28154%29.png)
 
 `method = "lm"`
 
@@ -323,7 +323,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(method = "lm", se=FALSE, lty = 2)
 ```
 
-![](../../../.gitbook/assets/image%20%28159%29.png)
+![](../../.gitbook/assets/image%20%28159%29.png)
 
 `aes(group = 1): take all the data as a whole`
 
@@ -334,15 +334,15 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(aes(group=1))
 ```
 
-![](../../../.gitbook/assets/image%20%28137%29.png)
+![](../../.gitbook/assets/image%20%28137%29.png)
 
 `fullrange = TRUE`
 
-![](../../../.gitbook/assets/image%20%28207%29.png)
+![](../../.gitbook/assets/image%20%28207%29.png)
 
 `span`: the span of data used to smooth
 
-![](../../../.gitbook/assets/image%20%28194%29.png)
+![](../../.gitbook/assets/image%20%28194%29.png)
 
 another example
 
@@ -352,29 +352,5 @@ ggplot(ChickWeight, aes(x = Time, y = weight, col = Diet)) +
   geom_smooth(lwd=2, se=FALSE)
 ```
 
-![](../../../.gitbook/assets/image%20%28171%29.png)
-
-## Statistics
-
-### stat\_summary
-
-\[ common usage \]
-
-```text
-smean.cl.normal(x, mult=qt((1+conf.int)/2,n-1), conf.int=.95, na.rm=TRUE)
-
-smean.sd(x, na.rm=TRUE)
-
-smean.sdl(x, mult=2, na.rm=TRUE)
-
-smean.cl.boot(x, conf.int=.95, B=1000, na.rm=TRUE, reps=FALSE)
-
-smedian.hilow(x, conf.int=.95, na.rm=TRUE)
-```
-
-draw mean and its n standard deviations, remember to adjust position to dodge
-
-![](../../../.gitbook/assets/image%20%28200%29.png)
-
-![](../../../.gitbook/assets/image%20%28205%29.png)
+![](../../.gitbook/assets/image%20%28171%29.png)
 

@@ -1,4 +1,4 @@
-# Coordinate
+# Coordinates
 
 ## scale\_
 
@@ -33,7 +33,7 @@ cyl.am +
   ## colors and names of labels
 ```
 
-![](../../../.gitbook/assets/image%20%28138%29.png)
+![](../../.gitbook/assets/image%20%28138%29.png)
 
 ```text
 ggplot(mtcars, aes(x = mpg, y = 0)) + ## here we only have x, we dont have y
@@ -41,13 +41,13 @@ ggplot(mtcars, aes(x = mpg, y = 0)) + ## here we only have x, we dont have y
   scale_y_continuous(limits = c(-2,2))
 ```
 
-![](../../../.gitbook/assets/image%20%28156%29.png)
+![](../../.gitbook/assets/image%20%28156%29.png)
 
 ### scale\_\*\_log10
 
 can omit limits argument and use default setting
 
-![](../../../.gitbook/assets/image%20%28195%29.png)
+![](../../.gitbook/assets/image%20%28195%29.png)
 
 ### scale\_color\_brewer
 
@@ -73,7 +73,7 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
   scale_fill_manual(values = blue_range(11))
 ```
 
-![](../../../.gitbook/assets/image%20%28190%29.png)
+![](../../.gitbook/assets/image%20%28190%29.png)
 
 ### sec.axis
 
@@ -97,19 +97,19 @@ ggplot(airquality, aes(Date, Temp)) +
   labs(x = "Date (1973)", y = "Fahrenheit")
 ```
 
-![](../../../.gitbook/assets/image%20%28197%29.png)
+![](../../.gitbook/assets/image%20%28197%29.png)
 
 ## coord\_trans
 
 can use any log form, but remember to adjust the labels
 
-![](../../../.gitbook/assets/image%20%28208%29.png)
+![](../../.gitbook/assets/image%20%28208%29.png)
 
 ## coord\_cartesian
 
 `xlim` or `ylim`
 
-![](../../../.gitbook/assets/image%20%28198%29.png)
+![](../../.gitbook/assets/image%20%28198%29.png)
 
 `expand = 0`: removes all buffer margin. Set the `clip` argument to `"off"` to prevent losing points on the edges.
 
@@ -117,7 +117,7 @@ can use any log form, but remember to adjust the labels
 
 coord\_fixed\(\) means **units** of x and y are 1:1, it is default
 
-![](../../../.gitbook/assets/image%20%28203%29.png)
+![](../../.gitbook/assets/image%20%28203%29.png)
 
 ## coord\_flip
 

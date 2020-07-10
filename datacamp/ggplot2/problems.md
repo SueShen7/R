@@ -2,13 +2,13 @@
 
 ## Categorical variable in x axis for scatterplot
 
-![](../../../.gitbook/assets/image%20%28178%29.png)
+![](../../.gitbook/assets/image%20%28178%29.png)
 
 solution: change `geom_point()` to `geom_jitter()`
 
 ## Overplotted scatterplot
 
-![](../../../.gitbook/assets/image%20%28177%29.png)
+![](../../.gitbook/assets/image%20%28177%29.png)
 
 solution: adjust alpha, shape, size etc.
 
@@ -17,7 +17,7 @@ ggplot(Vocab, aes(x=education, y=vocabulary))+
   geom_jitter(alpha = 0.2, shape = 1)
 ```
 
-![](../../../.gitbook/assets/image%20%28169%29.png)
+![](../../.gitbook/assets/image%20%28169%29.png)
 
 Or we can **jitter** the plot for categorical variables
 
@@ -30,7 +30,7 @@ ggplot(mtcars, aes(mpg, color = cyl)) +
   geom_freqpoly(binwidth = 1)
 ```
 
-![](../../../.gitbook/assets/image%20%28184%29.png)
+![](../../.gitbook/assets/image%20%28184%29.png)
 
 ## Ordinal variable colors
 
@@ -44,7 +44,7 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
   scale_fill_brewer()
 ```
 
-![](../../../.gitbook/assets/image%20%28170%29.png)
+![](../../.gitbook/assets/image%20%28170%29.png)
 
 but it only have 9 colors, we have 11 categories, so we have to do it manually
 
@@ -56,7 +56,7 @@ new_col(4) # the newly extrapolated colours
 munsell::plot_hex(new_col(4)) # Quick and dirty plot
 ```
 
-![](../../../.gitbook/assets/image%20%28186%29.png)
+![](../../.gitbook/assets/image%20%28186%29.png)
 
 ```text
 blues <- brewer.pal(9, "Blues")
@@ -66,7 +66,7 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
   scale_fill_manual(values = blue_range(11))
 ```
 
-![](../../../.gitbook/assets/image%20%28190%29.png)
+![](../../.gitbook/assets/image%20%28190%29.png)
 
 ## Simplify sydnax - qplot
 

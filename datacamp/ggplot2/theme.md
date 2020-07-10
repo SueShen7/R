@@ -1,4 +1,4 @@
-# Theme
+# Themes
 
 ## Legend
 
@@ -54,7 +54,7 @@ p + theme(axis.line = element_line(color = "red", linetype = "dashed"))
 
 the white boxes
 
-![](../../../.gitbook/assets/image%20%28172%29.png)
+![](../../.gitbook/assets/image%20%28172%29.png)
 
 `axis.ticks.length`
 
@@ -64,7 +64,7 @@ is the length of the bottom lines corresponding to x and y values
 axis.ticks.length = unit(2, "lines")
 ```
 
-![](../../../.gitbook/assets/image%20%28165%29.png)
+![](../../.gitbook/assets/image%20%28165%29.png)
 
 ### panel.grid
 
@@ -177,15 +177,15 @@ p1 + theme_bw()
 
 `theme_grey()`
 
-![](../../../.gitbook/assets/image%20%28192%29.png)
+![](../../.gitbook/assets/image%20%28192%29.png)
 
 `theme_bw()`
 
-![](../../../.gitbook/assets/image%20%28161%29.png)
+![](../../.gitbook/assets/image%20%28161%29.png)
 
 `theme_linedraw()`
 
-![](../../../.gitbook/assets/image%20%28179%29.png)
+![](../../.gitbook/assets/image%20%28179%29.png)
 
 `theme_tufte()`
 

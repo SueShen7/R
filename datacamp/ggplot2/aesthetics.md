@@ -10,7 +10,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
 ## specific parameters should be written in geom layer
 ```
 
-![](../../../.gitbook/assets/image%20%28153%29.png)
+![](../../.gitbook/assets/image%20%28153%29.png)
 
 ### color
 
@@ -23,7 +23,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = disp)) +
   geom_point()
 ```
 
-![](../../../.gitbook/assets/image%20%28140%29.png)
+![](../../.gitbook/assets/image%20%28140%29.png)
 
 more options in color could refer to scale\_ in [Coordinate](coordinate.md#scale_color_brewer).
 
@@ -36,11 +36,13 @@ ggplot(mtcars, aes(x = wt, y = mpg, size = disp)) +
   geom_point()
 ```
 
-![](../../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28143%29.png)
 
 ### shape
 
 shape requires a **categorical** variable
+
+![](../../.gitbook/assets/image%20%28188%29.png)
 
 ### fill
 
@@ -54,6 +56,10 @@ transparency 0 is transparent
 
 line dash pattern
 
+
+
+![](../../.gitbook/assets/image%20%2817%29.png)
+
 ### label
 
 text on plots or axes
@@ -63,7 +69,7 @@ ggplot(mtcars, aes(wt, mpg, label = cyl))+
   geom_text()
 ```
 
-![](../../../.gitbook/assets/image%20%28136%29.png)
+![](../../.gitbook/assets/image%20%28136%29.png)
 
 `rownames(data)`
 
@@ -72,7 +78,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars))) +
   geom_text(color = "red")
 ```
 
-![](../../../.gitbook/assets/image%20%28142%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 ### position
 
@@ -94,7 +100,7 @@ ggplot(data, aes())+
 
 `jitter_dodge` in `geom_point()`:
 
-![](../../../.gitbook/assets/image%20%28204%29.png)
+![](../../.gitbook/assets/image%20%28204%29.png)
 
 ### 
 
@@ -107,7 +113,7 @@ ggplot(ChickWeight, aes(x = Time, y = weight)) +
   geom_line(aes(group = Chick))
 ```
 
-![](../../../.gitbook/assets/image%20%28176%29.png)
+![](../../.gitbook/assets/image%20%28176%29.png)
 
 
 

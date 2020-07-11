@@ -75,6 +75,22 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
 
 ![](../../.gitbook/assets/image%20%28190%29.png)
 
+### scale\_fill\_gradient
+
+```text
+p + scale_fill_gradient(low = "white", high = "red")
+```
+
+![](../../.gitbook/assets/image%20%28210%29.png)
+
+### scale\_fill\_gradientn
+
+```text
+scale_fill_gradientn(colors = red_brewer_palette) # 9 colors from palette
+```
+
+![](../../.gitbook/assets/image%20%28217%29.png)
+
 ### sec.axis
 
 example: add second y axis for temperature \(2 kinds of units\)

@@ -2,13 +2,13 @@
 
 ## facet\_grid
 
-![](../../.gitbook/assets/image%20%28211%29.png)
+![](../../.gitbook/assets/image%20%28212%29.png)
 
 example
 
-![](../../.gitbook/assets/image%20%28216%29.png)
+![](../../.gitbook/assets/image%20%28218%29.png)
 
-![](../../.gitbook/assets/image%20%28214%29.png)
+![](../../.gitbook/assets/image%20%28215%29.png)
 
 ### labeller
 
@@ -24,15 +24,15 @@ Common alternatives are:
 
 ### scales and space
 
-![](../../.gitbook/assets/image%20%28215%29.png)
+![](../../.gitbook/assets/image%20%28216%29.png)
 
 `scales = "free_y"`
 
-![](../../.gitbook/assets/image%20%28219%29.png)
+![](../../.gitbook/assets/image%20%28221%29.png)
 
 `scales = "free_y", space = "free_y"`
 
-![](../../.gitbook/assets/image%20%28210%29.png)
+![](../../.gitbook/assets/image%20%28211%29.png)
 
 ### margins
 
@@ -44,7 +44,7 @@ Here, the `margins` argument to `facet_grid()` is your friend.
 * `TRUE`: add margins to every variable being faceted by.
 * `c("variable1", "variable2")`: **only add margins to the variables listed**.
 
-![](../../.gitbook/assets/image%20%28217%29.png)
+![](../../.gitbook/assets/image%20%28219%29.png)
 
 ## facet\_wrap
 
@@ -77,5 +77,5 @@ mtcars$fam <- factor(mtcars$am, labels = c(`0` = "automatic",
 
 ## arrange order
 
-![](../../.gitbook/assets/image%20%28213%29.png)
+![](../../.gitbook/assets/image%20%28214%29.png)
 

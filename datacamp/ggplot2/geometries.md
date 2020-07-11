@@ -17,7 +17,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_point(alpha=0.4)
 ```
 
-### add layers
+add layers
 
 the idea is that `geom_` could inherit data and `aes()` from `ggplot()`
 
@@ -198,6 +198,9 @@ II. has y
 ```text
 ggplot(iris_summ, aes(x = Species, y = avg)) +
     geom_bar(stat = "identity")
+#or
+ggplot(iris_summ, aes(x = Species, y = avg)) +
+    geom_col()
 ```
 
 `position = "stack"` by default

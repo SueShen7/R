@@ -238,6 +238,8 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
 
 ### geom\_errorbar
 
+in aes, color can be specified for errorbar, fill can be specified for bars
+
 ```text
 ggplot(iris_summ, aes(x = Species, y = avg)) +
     geom_bar(stat = "identity"), fill = "grey50") +

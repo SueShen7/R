@@ -7,15 +7,15 @@
 \[ common usage \]
 
 ```text
-smean.cl.normal(x, mult=qt((1+conf.int)/2,n-1), conf.int=.95, na.rm=TRUE)
+mean.cl.normal(x, mult=qt((1+conf.int)/2,n-1), conf.int=.95, na.rm=TRUE)
 
-smean.sd(x, na.rm=TRUE)
+mean.sd(x, na.rm=TRUE)
 
-smean.sdl(x, mult=2, na.rm=TRUE)
+mean.sdl(x, mult=2, na.rm=TRUE)
 
-smean.cl.boot(x, conf.int=.95, B=1000, na.rm=TRUE, reps=FALSE)
+mean.cl.boot(x, conf.int=.95, B=1000, na.rm=TRUE, reps=FALSE)
 
-smedian.hilow(x, conf.int=.95, na.rm=TRUE)
+median.hilow(x, conf.int=.95, na.rm=TRUE)
 ```
 
 draw mean and its n standard deviations, remember to adjust position to dodge
